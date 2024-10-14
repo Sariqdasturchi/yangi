@@ -13,6 +13,7 @@ const createOrUpdateBaseTag = (newHref) => {
   };
   
   // Misol uchun, <base> tegini yangilash
-  createOrUpdateBaseTag('https://www.alphabet-game.uz/');
+  createOrUpdateBaseTag('http://127.0.0.1:5501/');
   // https://alphabet-uz.netlify.app/
+  // http://127.0.0.1:5500/index.html
   // http://127.0.0.1:5500/index.html

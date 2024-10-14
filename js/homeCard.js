@@ -16,48 +16,64 @@ gameCards[0].addEventListener('click', () => {
 
     txt.innerText = 'O N A I M'
     txt.style.marginLeft = '15px'
+    setTimeout(() => {
+        audios.play()
+        console.log("done card");
+    }, 10000)
 })
 
 gameCards[1].addEventListener('click', () => {
     audio[1].play()
     wood.classList.add('game-page-active-wood')
 
+    txt.innerText = "T L B K R"
+    txt.style.marginLeft = '15px'
+
     ball.classList.remove('game-page-active-container')
     clout.classList.remove('game-page-active-clout')
+
+    setTimeout(() => {
+        music.play()
+        console.log("done card");
+    }, 10000)
 })
 
 gameCards[2].addEventListener('click', () => {
     audio[2].play()
     clout.classList.add('game-page-active-clout')
 
+    txt.innerText = "O' D U Y E"
+    txt.style.marginLeft = '15px'
+
     ball.classList.remove('game-page-active-container')
     wood.classList.remove('game-page-active-wood')
+
+    setTimeout(() => {
+        sound.play()
+        console.log("done card");
+    }, 10000)
 })
 
 const card = document.querySelector('.ball-container')
+const woodCard = document.querySelector('.wood-container')
 const audios = document.querySelector("#audios")
+const music = document.getElementById('audios-t')
+const sound = document.getElementById('audios-y')
 
 card.addEventListener('click', () => clickCard)
+woodCard.addEventListener('click', () => clickWood)
 
 function clickCard() {
-    card.innerHTML = `
-    <h3>O</h3>
-    `
-    audios.play()
-    console.log("done card");
+    card.style.display = 'none'
 }
 
 function clickWood() {
-    document.querySelector('.wood-container').addEventListener('click', () => {
-        document.querySelector('.wood-container').innerHTML = `<h3 style="color: white">T</h3>`
-    })
+    woodCard.style.display = 'none'
+    console.log('error');
 }
 
 function clickClout() {
-    document.querySelector('.clout-container').addEventListener('click', () => {
-        document.querySelector('.clout-container').innerHTML = `<h3 style="color: white">O'</h3>`
-    })
+    document.querySelector('.clout-container').style.display = 'none'
 }
-
 
 
